@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>jQuery Mobile ToDo App</title>
+  <meta name="description" content="a jquery mobile todo app">
+  <meta name="author" content="Andrew W. Pawluczkowycz">
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link href='http://fonts.googleapis.com/css?family=Raleway:600,400,300' rel='stylesheet' type='text/css'>
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/jquery.mobile-1.4.5.css">
+  <link rel="stylesheet" href="css/todo.css">
+  
+  <!-- JQUERY
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <script src="js/jquery-1.11.1.js"></script>
+  <script src="js/jquery.mobile-1.4.5.min.js"></script>
+  <script src="js/andrew.js"></script>
+
+</head>
+<body>
+
+  <!-- Home Page -->
+  <div data-role="page" id="home">
+    <header data-role="header">
+      <h1>A jQuery Mobile ToDo App</h1>
+    </header>
+    
+    <div role="main" class="ui-content">
+      <p><a href="#add" id="add-button" class="ui-btn ui-corner-all">Add A ToDo</a></p>
+      <p><a href="#" data-ajax="false" class="ui-btn ui-corner-all ui-btn-b" id="clear-button">Clear ToDo</a>
+      </p>
+      <ul id="todos" data-role="listview" data-filter="true" data-filter-placeholder="Search ToDos..." data-inset="true">
+      </ul>
+    </div>
+    
+    <footer data-role="footer">
+      <h4>Andrew W. Pawluczkowycz | <a href="https://pawluczkowycz.github.io" target="_blank">pawluczkowycz.github.io</a></h4>
+    </footer>
+  </div>
+  
+  <!-- Add Page -->
+  <div data-role="page" id="add">
+    <header data-role="header">
+      <a href="#home" id="cancel-btn" data-icon="delete">Cancel</a>
+      <h1>Add A ToDo</h1>
+      <a href="#home" id="add-btn" data-icon="check" data-theme="b" data-ajax="false">Save</a>
+    </header>
+    
+    <div role="main" class="ui-content">
+      <form id="add-form">
+        <input type="text" name="todo_name" id="todo_name" placeholder="Add Todo Name">
+        <input type="date" name="todo_date" id="todo_date">
+      </form>
+    </div>
+    
+    <footer data-role="footer">
+      <h4>Page Footer</h4>
+    </footer>
+  </div>
+  
+  <!-- Edit Page -->
+  <div data-role="page" id="edit">
+    <header data-role="header">
+      <a href="#home" id="cancel-btn" data-icon="delete">Cancel</a>
+      <h1>Edit ToDo</h1>
+      <a href="#home" id="save-btn" data-icon="check" data-theme="b" >Save</a>
+    
+    <div role="main" class="ui-content">
+      <form id="edit-form">
+        <input type="text" name="todo_name_edit" id="todo_name_edit" placeholder="Add Todo Name">
+        <input type="date" name="todo_date_edit" id="todo_date_edit">
+        <a href="#" id="delete" data-role="button">Delete</a>
+      </form>
+    </div>
+    
+    <footer data-role="footer">
+      <h4>Andrew W. Pawluczkowycz</h4>
+    </footer>
+  </div>
+
+<!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+</body>
+</html>
